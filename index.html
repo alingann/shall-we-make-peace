@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yıl Dönümü Sürprizi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .hidden-content {
+      display: none;
+    }
+    .poem {
+      font-size: 18px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    video {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    input[type="password"], button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border: 2px solid #ff9a9e;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #ff9a9e;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff7e7e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="login-section">
+      <h1>Yıl Dönümü Sürprizi</h1>
+      <p>Bu sayfaya erişmek için şifreyi girin.</p>
+      <input type="password" id="password" placeholder="Şifre">
+      <button onclick="checkPassword()">Giriş Yap</button>
+    </div>
+    <div id="main-content" class="hidden-content">
+      <h1>3 Aralık 2024</h1>
+      <p>Bu özel günü hatırlatmak ve sana olan sevgimi göstermek için hazırladım.</p>
+      <div class="poem">
+        <strong>Lütfen</strong> dinleyin bu sessiz çığlığı, <br>
+        <strong>Üzülmesin</strong> artık bir çocuk daha. <br>
+        <strong>Tutmayın</strong> nefreti, bırakın dağılsın, <br>
+        <strong>Fırtınalar</strong> dursun, sakinleşsin hava. <br>
+        <strong>Eski</strong> günlerin hatırına, bir an düşünün, <br>
+        <strong>Ne</strong> kadar güçlüydü bir zamanlar sevginiz. <br>
+        <strong>Ben</strong> sadece huzur isterim evimde, <br>
+        <strong>Anlamsız</strong> kavgalar değil, gülümsemeler. <br>
+        <strong>Renkli</strong> rüyalarımı solmasın kırgınlıklar, <br>
+        <strong>İçimde</strong> hep bir umut, bir barış beklentisi. <br>
+        <strong>Şimdi</strong> size yalvarıyorum, kırmayın beni, <br>
+        <strong>İnanın</strong>, sevgiyle her şey iyileşir. <br>
+        <strong>Ne</strong>'olur, lütfen barışın.
+      </div>
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Tarayıcınız bu videoyu desteklemiyor.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === '2009') {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      } else {
+        alert('Yanlış şifre. Lütfen tekrar deneyin.');
+      }
+    }
+  </script>
+</body>
+</html>
